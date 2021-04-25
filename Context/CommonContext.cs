@@ -14,7 +14,7 @@ namespace Context
     [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class CommonContext : DbContext
     {
-        public CommonContext()
+        public CommonContext()  
               : base("POSakoPOSkaba")
         {
         }

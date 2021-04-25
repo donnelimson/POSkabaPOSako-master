@@ -9,6 +9,6 @@ namespace Model.DTO
     public class ParkedTableDTO
     {
         public int Id { get; set; }
-        public string TableNo { get; set; }
+        public int TableNo { get; set; }
     }
 }

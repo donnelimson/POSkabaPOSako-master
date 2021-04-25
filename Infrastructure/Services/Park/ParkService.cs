@@ -15,7 +15,7 @@ namespace Infrastructure.Services
     {
         ParkRepository _parkRepository = new ParkRepository(new CommonContext());
 
-        public void ParkItems(BindingList<ItemMasterListboxMainPOS> items, int appuserId, string tableNo)
+        public void ParkItems(BindingList<ItemMasterListboxMainPOS> items, int appuserId, int tableNo)
         {
             var park = new Park
             {

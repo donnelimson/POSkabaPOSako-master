@@ -15,7 +15,7 @@ namespace Model
         }
         [Key]
         public int Id { get; set; }
-        public string TableNo { get; set; }
+        public int TableNo { get; set; }
         public bool IsProcessed { get; set; } = false;
         public virtual ICollection<ParkItem> ParkItems { get; set; }
     }

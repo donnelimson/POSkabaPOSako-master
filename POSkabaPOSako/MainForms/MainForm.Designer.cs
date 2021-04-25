@@ -42,9 +42,9 @@ namespace POSkabaPOSako
             this.QuantityListbox = new System.Windows.Forms.ListBox();
             this.ItemListbox = new System.Windows.Forms.ListBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.appuserDTOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.appuserDTOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.itemMasterListboxMainPOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.appuserDTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();

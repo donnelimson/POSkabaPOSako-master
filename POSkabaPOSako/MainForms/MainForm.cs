@@ -1,6 +1,7 @@
 ﻿using Infrastructure.Services;
 using Infrastructure.Services.ItemMasterService;
 using Model.DTO;
+using POSkabaPOSako.MainForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -114,20 +115,25 @@ namespace POSkabaPOSako
                 BarcodeTextbox.Clear();
 
         }
-        private void ParkItems()
+        public void ParkItems(string tableNo, ParkTableInput pti)
         {
-            if (items.Count != 0)
-            {
-                _parkService.ParkItems(items,AppuserData.Id,"1");
-                items.Clear();
-                orderCount = 0;
-                PopulateParkedTable();
-            }
+            RunMethod(()=> {
+                if (items.Count != 0)
+                {
+                    _parkService.ParkItems(items, AppuserData.Id, Convert.ToInt32(tableNo));
+                    items.Clear();
+                    orderCount = 0;
+                    PopulateParkedTable();
+                    ShowPopup(new PopupBox(false, "Sucessfully parked items."));
+                }
+                pti.Close();
+            },"Failed to park item");
         }
         private void PopulateParkedTable()
         {
             var parks = _parkService.GetAllUnProcessedPark();
             var counter = 0;
+            flowLayoutPanel2.Controls.Clear();
             foreach (var park in parks)
             {
                 counter++;
@@ -192,7 +198,8 @@ namespace POSkabaPOSako
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ParkItems();
+            //  ParkItems();
+            ShowDialogForm(new ParkTableInput(this));
         }
         private void InitTable()
         {

@@ -1,8 +1,10 @@
 ﻿using Infrastructure.Services.AppuserService;
 using Model.DTO;
+using POSkabaPOSako.MainForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +35,30 @@ namespace POSkabaPOSako
             newForm.ShowDialog();
             oldForm.Close();
         }
-
+        public void ShowDialogForm(Form newForm)
+        {
+            newForm.ShowDialog();
+        }
+        public void ShowPopup(PopupBox popupBox)
+        {
+            popupBox.ShowDialog();
+        }
+        public void RunMethod(Action method, string errorMessage)
+        {
+            try
+            {
+                method();
+            }
+            catch (DbUpdateException dbEx)
+            {
+                ShowPopup(new PopupBox(true, errorMessage));
+            }
+            catch (Exception ex)
+            {
+                ShowPopup(new PopupBox(true, errorMessage));
+            }
+          
+        }
         private void InitializeComponent()
         {
             this.SuspendLayout();

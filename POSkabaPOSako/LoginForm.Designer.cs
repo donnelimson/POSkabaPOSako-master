@@ -70,7 +70,7 @@
             // PasswordTextbox
             // 
             this.PasswordTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PasswordTextbox.Font = new System.Drawing.Font("Arial Narrow", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextbox.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextbox.Location = new System.Drawing.Point(3, 59);
             this.PasswordTextbox.Name = "PasswordTextbox";
             this.PasswordTextbox.PasswordChar = '*';
@@ -81,7 +81,7 @@
             // UserTextbox
             // 
             this.UserTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UserTextbox.Font = new System.Drawing.Font("Arial Narrow", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserTextbox.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserTextbox.Location = new System.Drawing.Point(3, 3);
             this.UserTextbox.Name = "UserTextbox";
             this.UserTextbox.Size = new System.Drawing.Size(295, 41);
